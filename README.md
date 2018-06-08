@@ -3,7 +3,7 @@
 ![alt text](https://drive.google.com/open?id=1whsdYIIPy5RxfvnFVuhp7MA-euLm29Qh "33Across")
 
 
-## Terminal Commands
+## Terminal Command
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and angular 4.x.
 
