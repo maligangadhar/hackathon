@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationStyleMetadata } from '@angular/core/src/animation/dsl';
+import {RevenueReportServiceService} from '../revenue-report-service.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-table-list',
@@ -6,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-list.component.css']
 })
 export class TableListComponent implements OnInit {
-
-  constructor() { }
+  data: Observable<Array<any>>;
+  
+  constructor(private service: RevenueReportServiceService) {
+    this.data = service.getRevReport();
+    console.log("AppComponent.data:" + this.data);
+  }
 
   ngOnInit() {
   }

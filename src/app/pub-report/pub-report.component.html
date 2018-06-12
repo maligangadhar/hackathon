@@ -1,0 +1,63 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+        
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Pub Report</h4>
+            <p class="card-category"> revenue report for 13th June 2018</p>
+          </div>
+        
+          <!-- <div class="card-body"> -->
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Date
+                </th>
+                <th>
+                  Domain Name
+                </th>
+                <th>
+                  Clicks
+                </th>
+                <th>
+                  Revenue
+                </th>
+                <th>
+                  Cost
+                </th>
+                <th>
+                  Profit
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of data2 | async">
+                  <td class="text-primary">
+                    {{d.date}}
+                  </td>
+                  <td>
+                    {{d.domain_name}}
+                  </td>
+                  <td>
+                    {{d.total_clicks}}
+                  </td>
+                  <td>
+                    {{d.total_revenue}}
+                  </td>
+                  <td>
+                    {{d.total_cost}}
+                  </td>
+                  <td>
+                    {{d.total_profit}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

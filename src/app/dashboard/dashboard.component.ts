@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
       let seq: any, delays: any, durations: any;
       seq = 0;
       delays = 80;
-      durations = 500;
+                                                durations = 500;
       
       chart.on('draw', function(data) {
         if(data.type === 'line' || data.type === 'area') {
@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
         } else if(data.type === 'point') {
               seq++;
               data.element.animate({
-                opacity: {
+opacity: {
                   begin: seq * delays,
                   dur: durations,
                   from: 0,
@@ -151,6 +151,20 @@ export class DashboardComponent implements OnInit {
        let increment:number=+30000; 
        this.grossRevenue = this.grossRevenue +12000;
       }, 9000);
+
+      // Pie
+      var data = {
+        labels: ['Bananas', 'Apples', 'Grapes'],
+        series: [20, 15, 40]
+      };
+      
+      var options = {
+        labelInterpolationFnc: function(value) {
+          return value[0]
+        }
+      };
+      
+      new Chartist.Pie('#pieChart', data, options, responsiveOptions);
   }
 
 }
